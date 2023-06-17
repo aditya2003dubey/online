@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Online Food Order And Delivery</title>
+</head>
+<style>
+    
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #navbar::before {
+        content: "";
+        background-color: black;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        /* opacity: 0.4; */
+    }
+
+    #navbar {
+        position: relative;
+        /* top: 0px; */
+        display: flex;
+        /* align-items: center; */
+        font-family: 'Fira Sans', sans-serif;
+    }
+
+    #image img {
+        height: 40px;
+        width: 80px;
+        padding: 10px;
+        /* border-radius: 30px; */
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    .list {
+        list-style: none;
+        margin: 18px;
+        justify-content: center;
+    }
+
+    .list a {
+        padding: 12px;
+        font-size: 1.4rem;
+        color: white;
+        text-decoration: none;
+        justify-content: center;
+        text-align: center;
+        /* margin: 10px 20px; */
+    }
+
+    .list a:hover {
+        color: black;
+        background-color: white;
+        border-radius: 25px;
+    }
+
+    #content {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        position: relative;
+        font-family: sans-serif;
+    }
+
+    #content::before {
+        content: "";
+        background: url(picture.jpg) no-repeat center center/cover;
+        position: absolute;
+        top: -65px;
+        left: 0px;
+        height: 145%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.89;
+
+    }
+
+    .para {
+        justify-content: center;
+        margin-top: 115px;
+        color: rgba(255, 255, 255, 0.89);
+        font-family: sans-serif;
+    }
+
+    .para h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        font-family: sans-serif;
+    }
+
+    p {
+        font-size: 1.4rem;
+        font-family: sans-serif;
+    }
+
+    .btn {
+        border-color: brown;
+        border-radius: 20px;
+        font-size: 1rem;
+        color: white;
+        text-align: center;
+        justify-content: center;
+        margin: 10px 42%;
+        padding: 5px;
+        background-color: rgba(179, 72, 72, 0.808);
+        border: 2px solid;
+        cursor: pointer;
+        font-family: sans-serif;
+    }
+
+    #offer {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .box-1 img {
+        height: 150px;
+        width: 150px;
+        margin: 10px;
+    }
+
+    #box {
+        display: flex;
+        margin: auto;
+        width: 95%;
+    }
+
+    .box-1 {
+        border: 3px solid brown;
+        margin: 15px;
+        border-radius: 15px;
+        padding: 5px;
+        height: 310px;
+        width: 490px;
+        background-color: rgb(252, 245, 245);
+    }
+
+    .heading {
+        font-size: 3rem;
+        margin: 75px 5px 5px 5px;
+        text-align: center;
+        justify-content: center;
+        font-family: sans-serif;
+    }
+
+    .heading-2 {
+        font-size: 3rem;
+        margin: 8px;
+        text-align: center;
+        justify-content: center;
+        font-family: sans-serif;
+    }
+
+    #partners {
+        position: relative;
+    }
+
+    #partners::before {
+        content: "";
+        background: url(partners.jpg) center center/cover;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 110%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.75;
+    }
+
+    #partners-back {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+
+    }
+
+    .partners-logo img {
+        height: 150px;
+        width: 150px;
+        /* text-align: center; */
+        /* justify-content: center; */
+        margin-top: 40px;
+        margin-right: 40px;
+        margin-bottom: 30px;
+    }
+
+    #form {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    #form input {
+        width: 40%;
+        height: 8%;
+        display: block;
+        margin: auto;
+        font-size: 1.2rem;
+        border: 3px solid black;
+        border-radius: 15px;
+        background: none;
+        font-family: sans-serif;
+    }
+
+    #form label {
+        font-size: 1.3rem;
+        margin: 5px;
+        font-family: sans-serif;
+        font-weight: bold;
+    }
+
+    #form textarea {
+        width: 40%;
+        display: block;
+        margin: auto;
+        border: 3px solid black;
+        border-radius: 15px;
+        background: none;
+    }
+
+    #form ::placeholder {
+        text-align: center;
+        justify-content: center;
+        font-family: sans-serif;
+        color: rgb(247, 141, 2);
+
+    }
+
+    #form textarea::placeholder {
+        font-size: 1.3rem;
+        font-family: sans-serif;
+        color: rgb(247, 141, 2);
+
+    }
+
+    #contact {
+        position: relative;
+        margin-top: 30px;
+    }
+
+    #contact::before {
+        content: "";
+        background: url(contact-bg.jpg) center center/cover;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        opacity: 0.75;
+    }
+</style>
+
+<body>
+    <nav id="navbar">
+        <div id="image"> <img src="food logo.jpg" alt="foodorder.com"></div>
+        <ul>
+            <li class="list"><a href="#">Home</a></li>
+            <li class="list"><a href="#">Services</a></li>
+            <li class="list"><a href="#">About-us</a></li>
+            <li class="list"><a href="#">Contact-us</a></li>
+        </ul>
+    </nav>
+    <section id="content">
+        <div class="para">
+            <h1>welcome to foood delivery portal</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione mollitia voluptatibus inventore
+                reprehenderit tempore assumenda?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, optio.</p>
+        </div>
+        <input class="btn" type="button" value="Order Now">
+    </section>
+    <section id="offer">
+        <h1 class="heading">Our Services</h1>
+        <div id="box">
+            <div class="box-1">
+                <img src="pizza.jpg" alt="">
+                <h1 class="sub-heading">Food Catering</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="box-1">
+                <img src="box-2.png" alt="">
+                <h1 class="sub-heading">Bulk Ordering</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="box-1">
+                <img src="icon.jpg" alt="">
+                <h1 class="sub-heading">Food Ordering</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit Lorem. </p>
+            </div>
+        </div>
+    </section>
+    <section id="partners">
+        <h1 class="heading-2">***Our Partners***</h1>
+        <div id="partners-back">
+
+            <div class="partners-logo">
+                <img src="contact-logo.png" alt="">
+            </div>
+            <div class="partners-logo">
+                <img src="contact-logo2.png" alt="">
+            </div>
+            <div class="partners-logo">
+                <img src="contact-logo6.png" alt="">
+            </div>
+            <div class="partners-logo">
+                <img src="contact-logo4.png" alt="">
+            </div>
+            <div class="partners-logo">
+                <img src="contact-logo5.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1 class="heading-2">***Contact us***</h1>
+        <form action="#" id="form">
+            <label for="name">Name</label>
+            <input type="text" name="name" placeholder="---Enter Your Name---">
+            <label for="mail">E-mail</label>
+            <input type="email" name="mail" placeholder="---Enter your E-mail---">
+            <label for="num">Number</label>
+            <input type="number" name="num" placeholder="---Enter Your Ph-no---">
+            <label for="address">Address</label>
+            <textarea name="address" id="address" cols="20" rows="10" placeholder="Enter your Address....."></textarea>
+        </form>
+    </section>
+</body>
+
+</html>
